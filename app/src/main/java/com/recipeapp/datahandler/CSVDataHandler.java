@@ -4,7 +4,9 @@ import com.recipeapp.model.Ingredient;
 import com.recipeapp.model.Recipe;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -51,11 +53,25 @@ public class CSVDataHandler implements DataHandler {
 
     @Override
     public void writeData(Recipe recipe) throws IOException {
-        // このメソッドは未実装
+        // ファイルに追記モードで新しいレシピを追加
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
+            StringBuilder line = new StringBuilder();
+
+            // レシピ名を追加
+            line.append(recipe.getName());
+
+            // 材料をカンマ区切りで追加
+            recipe.getIngredients().forEach(ingredient -> line.append(",").append(ingredient.getName()));
+
+            // 行を書き込む
+            writer.write(line.toString());
+            writer.newLine();
+        }
     }
 
     @Override
     public ArrayList<Recipe> searchData(String keyword) throws IOException {
-        return null; // このメソッドは未実装
+        // まだ未実装
+        return null;
     }
 }

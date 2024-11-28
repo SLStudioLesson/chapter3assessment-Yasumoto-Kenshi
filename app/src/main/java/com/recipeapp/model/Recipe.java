@@ -1,3 +1,5 @@
+//問1でRecipeクラスを作成
+
 package com.recipeapp.model;
 
 import java.util.ArrayList;

@@ -1,3 +1,5 @@
+//問1でingredientクラスを作成
+
 package com.recipeapp.model;
 
 public class Ingredient {

@@ -20,6 +20,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import com.recipeapp.datahandler.DataHandler;
 import com.recipeapp.model.Ingredient;
 import com.recipeapp.model.Recipe;
+import com.recipeapp.ui.RecipeUI;
 
 @ExtendWith(MockitoExtension.class)
 public class RecipeUITest {
