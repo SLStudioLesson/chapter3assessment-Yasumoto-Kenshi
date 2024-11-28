@@ -1,5 +1,3 @@
-package com.recipeapp;
-
 import com.recipeapp.datahandler.*;
 import com.recipeapp.ui.RecipeUI;
 import java.util.Scanner;

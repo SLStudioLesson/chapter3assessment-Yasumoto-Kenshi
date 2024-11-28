@@ -49,9 +49,9 @@ public class RecipeUI {
             if (recipes.isEmpty()) {
                 System.out.println("No recipes available.");
             } else {
+                System.out.println("-----------------------------------");
                 // 各レシピを整形して表示
                 recipes.forEach(recipe -> {
-                    System.out.println("-----------------------------------");
                     System.out.println("Recipe Name: " + recipe.getName());
                     System.out.print("Main Ingredients: ");
                     System.out.println(String.join(", ", recipe.getIngredients().stream()
